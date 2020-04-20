@@ -13,5 +13,10 @@ namespace _3342TermProjectJohnOmar
         {
 
         }
+
+        protected void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
