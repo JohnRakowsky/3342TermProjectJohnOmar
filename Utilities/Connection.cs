@@ -219,5 +219,13 @@ namespace Utilities
             }
         }
 
+           // added to open connection 
+        public SqlConnection openConc()
+        {
+
+            myConnectionSql.Open();
+            return myConnectionSql;
+        }
+
     }   // end class
 }   // end namespace
