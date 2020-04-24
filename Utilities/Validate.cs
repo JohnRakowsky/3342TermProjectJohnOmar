@@ -11,7 +11,6 @@ namespace Utilities
 {
     public class Validate
     {
-
         private string UserEmail;
         private string UserPassword;
 
@@ -69,8 +68,8 @@ namespace Utilities
 
             return userVal;
 
-
         }
-
     }
 }
+
+

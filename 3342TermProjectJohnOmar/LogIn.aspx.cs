@@ -37,56 +37,44 @@ namespace _3342TermProjectJohnOmar
         protected void btnLogin_Click(object sender, EventArgs e)
         {
 
-            DBConnect dBConnect = new DBConnect();
-            SqlCommand credentials = new SqlCommand();
-            credentials.CommandType = CommandType.StoredProcedure;
-            credentials.CommandText = "checkPasswordAndUser";
-            credentials.Parameters.AddWithValue("@userEmail", txtUserEmail.Text);
-            credentials.Parameters.AddWithValue("@userPassword", txtPass.Text);
+            Validate v = new Validate();
 
-            DataSet response = dBConnect.GetDataSetUsingCmdObj(credentials);
+            string valueReturned = v.checkUser(txtUserEmail.Text, txtPass.Text);
 
-            if (response.Tables[0].Rows.Count == 0)
+
+            //  if the value is 0, then user is not in the database or didn't enter valid user name and password.
+            if (valueReturned == "0")
             {
                 lblError.Visible = true;
+
             }
-            else{
 
-                //check if the user clicked remember me check box. if yes store useremail and password in a cookie
-                    if (cbRemember.Checked)
-                   {
-                       Response.Cookies["authenticationCookie"]["userEmail"] = txtUserEmail.Text;
-                       Response.Cookies["authenticationCookie"]["userPassword"] = txtPass.Text;
-                   }
 
-                test.Text = response.Tables[0].Rows[0]["userEmail"].ToString();
+            else
+            {
 
-                // redirect to profile page. 
-                    //Response.Redirect("ProfilePage.aspx");
+                // check if the user clicked remember me check box. if yes store useremail and password in a cookie
+                if (cbRemember.Checked)
+                {
+                    Response.Cookies["authenticationCookie"]["userEmail"] = txtUserEmail.Text;
+                    Response.Cookies["authenticationCookie"]["userPassword"] = txtPass.Text;
                 }
 
-                //Validate v = new Validate();
 
-                //string valueReturned = v.checkUser(txtUserEmail.Text, txtPass.Text);
-
-
-                //  if the value is 0, then user is not in the database or didn't enter valid user name and password.
-                //if (valueReturned == "0")
-                // {
-                //     lblError.Visible = true;
-
-                // }
-
-
+                // redirect to profile page. 
+                Response.Redirect("ProfilePage.aspx");
+            }
         }
         protected void btnRegisterNew_Click(object sender, EventArgs e)
         {
 
             Response.Redirect("Registration.aspx");
         }
-
-
-
     }
+        
+
+
+
 }
+
 

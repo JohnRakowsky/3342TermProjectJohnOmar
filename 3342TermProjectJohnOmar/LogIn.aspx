@@ -43,7 +43,7 @@
             </table>
 
 
-        <asp:Label ID ="test" runat="server" Text ="test"></asp:Label>
+        
     </form>
 </body>
 </html>
