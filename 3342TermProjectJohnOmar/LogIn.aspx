@@ -14,7 +14,7 @@
                         <asp:Label ID="lblUserEmail" runat="server" Text="Enter your Email:"></asp:Label></td>
                     <td>
                         <asp:TextBox ID="txtUserEmail" runat="server"></asp:TextBox></td>
-              
+                </tr>
                   <tr>
                     <td>
                         <asp:Label ID="lblPass" runat="server" Text="Enter your password:"></asp:Label></td>
@@ -28,9 +28,11 @@
                         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
 <%--                       <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click"/>--%>
                 <asp:Button ID="btnRegisterNew" runat="server" Text="Register" OnClick="btnRegisterNew_Click"/>
+                        </td>
                   </tr>
                      <td>
                          <asp:CheckBox ID="cbRemember" Text="Remember me" runat="server" Height="16px" />
+                         </td>
                 <tr>
                     <td></td>
                     <td>
@@ -39,6 +41,9 @@
                 </tr>
 
             </table>
+
+
+        <asp:Label ID ="test" runat="server" Text ="test"></asp:Label>
     </form>
 </body>
 </html>
