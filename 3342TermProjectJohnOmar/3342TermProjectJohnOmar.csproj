@@ -67,8 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\JR Logo.png" />
     <Content Include="LogIn.aspx" />
     <Content Include="MainPage.aspx" />
+    <Content Include="Premium.aspx" />
     <Content Include="ProfilePage.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="UserSearch.aspx" />
@@ -88,6 +90,13 @@
     </Compile>
     <Compile Include="MainPage.aspx.designer.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Premium.aspx.cs">
+      <DependentUpon>Premium.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Premium.aspx.designer.cs">
+      <DependentUpon>Premium.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProfilePage.aspx.cs">
       <DependentUpon>ProfilePage.aspx</DependentUpon>
