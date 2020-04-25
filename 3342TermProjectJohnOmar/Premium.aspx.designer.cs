@@ -10,7 +10,7 @@
 namespace _3342TermProjectJohnOmar {
     
     
-    public partial class MainPage {
+    public partial class Premium {
         
         /// <summary>
         /// form1 control.

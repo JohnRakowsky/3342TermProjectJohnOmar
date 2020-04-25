@@ -15,6 +15,7 @@ namespace _3342TermProjectJohnOmar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblError.Visible = false;
             DBConnect dBConnect = new DBConnect();
             SqlCommand objCommand = new SqlCommand();
 
@@ -69,9 +70,11 @@ namespace _3342TermProjectJohnOmar
 
             Response.Redirect("Registration.aspx");
         }
-
-
-
     }
+        
+
+
+
 }
+
 

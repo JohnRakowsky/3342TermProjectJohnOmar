@@ -54,7 +54,7 @@
             <br />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
 &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnRegister runat="server" Text="btnRegister" />
+            <asp:Button ID="btnRegister" runat="server" Text="btnRegister" />
             <br />
         </div>
     </form>
