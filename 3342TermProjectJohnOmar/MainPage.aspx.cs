@@ -11,6 +11,19 @@ namespace _3342TermProjectJohnOmar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["currentUser"] != null)
+            {
+                navbarAccount.Visible = true;
+                navbarLogIn.Visible = false;
+            }
+            else
+            {
+                navbarAccount.Visible = false;
+                navbarLogIn.Visible = true;
+            }
+
+
+
 
         }
     }

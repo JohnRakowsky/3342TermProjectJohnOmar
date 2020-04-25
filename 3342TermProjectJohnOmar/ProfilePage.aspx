@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div id="navbar">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <a class="navbar-brand" href="MainPage.aspx">Temple Singles</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,29 +44,172 @@
             </nav>
         </div>
         <div>
+        <div class="container-fluid padding" id="viewProfile" runat="server">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-9">
+                    <h3 runat="server" id="ttlName">User Name</h3>
+                </div>
+                <div class="col-2">
+                    <asp:Button ID="btnEditProfile" runat="server" Text="Edit Profile" CssClass="form-control" OnClick="btnEditProfile_Click" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 mr-auto "> <!--left-->
+                    <div class="row">
+                        <div class="col-12 offset-2">
+                            <div class="row padding"> <!--top--->
+                               <div class="col-12">
+                                    <asp:Image ID="imgOldProfilePic" runat="server" />             
+                                </div>
+                            </div><!--/top--->
+                                 <!--Bio-->
+                                <div class="row padding"><!--bottom--->
+                                    <div class="col-9">
+                                     <div class="form-group green-border-focus">
+                                        <h3>Bio</h3>
+                                         <asp:TextBox ID="txtOldBio" runat="server" TextMode="MultiLine" Rows="7" cols="80" CssClass="form-control" placeholder="Write your Bio here!" ReadOnly="true"></asp:TextBox>
+                                    </div>
+                                </div>  
+                            </div><!--/bottom--->
+                        </div>
+                    </div>
+                </div><!--/left-->
+                <div class="col-sm-12 col-md-6 mr-auto "><!--right-->
+                    <div class="row">
+                        <div class="col-12 ">
+                          <br />     <!----Personal Information-----> 
+                           <div class="row">
+                               <div class="col-md-3">
+                                 <label for="txtPreference">Partner Preference</label>
+                                   <asp:Label ID="lblPreference" runat="server" Text="Preference" CssClass="form-control"></asp:Label>
+                                </div>
+                              <div class="col-md-4 offset-md-3">
+                                 <label for="txtAge">Age</label>
+                                 <asp:Label ID="lblAge" runat="server" Text="Age" CssClass="form-control"></asp:Label>
+                              </div>
+                            </div>  
+                            
 
-            <br />
-            <br />
-            <br />
-            <table>
-                <tr>
-                    <td>
-                        <asp:Image ID="imgProfilePic" runat="server" />
-                    </td>
-                    <td>
-                        <asp:Label ID="lblName" runat="server" Text="Label"></asp:Label>
-                        <asp:Label ID="lblAge" runat="server" Text="Label"></asp:Label>
-                        <asp:Label ID="lblPreference" runat="server" Text="Label"></asp:Label>
-                        <asp:Label ID="lblCity" runat="server" Text="Label"></asp:Label>
-                    </td>
-                </tr>
-            </table>
-            
-            
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <label for="txtEmail">Email Address</label>
+                                  <asp:Label ID="lblEmail" runat="server" Text="Email" CssClass="form-control"></asp:Label>
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="txtPhoneNumber">Phone Number</label>
+                                  <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number" CssClass="form-control"></asp:Label>
+                                </div>
+                           </div>
+                    
+                           
+
+                                                       
+                            <!----Fluff Info--->
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <label for="txtEmail">Where did you go to school?</label>
+                                  <asp:Label ID="lblSchool" runat="server" Text="Schooling" CssClass="form-control"></asp:Label>
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="txtKids">Plans for kids?</label>
+                                  <asp:Label ID="lblKids" runat="server" Text="Kids" CssClass="form-control"></asp:Label>
+                                </div>
+                              </div>
+
+                            
+                            <br />
+                    
+                    </div>
+                </div><!--/right-->
+            </div>            
+        </div>
+        </div>
 
 
+        <div class="container-fluid padding" id="editProfile" runat="server" visible="false">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 mr-auto "> <!--left-->
+                    <div class="row">
+                        <div class="col-12 offset-2">
+                            <div class="row padding"> <!--top--->
+                               <div class="col-12">
+                                    <asp:Image ID="imgNewProfilePic" runat="server" />             
+                                    <div class="form-group">
+                                    <label for="btnUpload">Upload Photo</label>
+                                    <input type="file" class="form-control-file" id="btnUpload" runat="server"/>
+                                    </div>
+                                </div>
+                            </div><!--/top--->
+                                 <!--Bio-->
+                                <div class="row padding"><!--bottom--->
+                                    <div class="col-9">
+                                     <div class="form-group green-border-focus">
+                                        <h3>Bio</h3>
+                                         <asp:TextBox ID="txtBio" runat="server" TextMode="MultiLine" Rows="7" cols="80" CssClass="form-control" placeholder="Write your Bio here!"></asp:TextBox>
+                                    </div>
+                                </div>  
+                            </div><!--/bottom--->
+                        </div>
+                    </div>
+                </div><!--/left-->
+                <div class="col-sm-12 col-md-6 mr-auto "><!--right-->
+                    <div class="row">
+                        <div class="col-12 ">
+                          <br />     <!----Personal Information-----> 
+                           <div class="form-row">
+                               <div class="form-group col-md-3">
+                                 <label for="txtPreference">Partner Preference</label>
+                                 <asp:TextBox ID="txtPreference" runat="server" CssClass="form-control" placeholder="Partner Preference"></asp:TextBox>
+                                </div>
+                              <div class="form-group col-md-4 offset-md-3">
+                                 <label for="txtAge">Age</label>
+                                 <asp:TextBox ID="txtAge" runat="server" CssClass="form-control" placeholder="Age"></asp:TextBox>
+                              </div>
+                            </div>  
+                            
 
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="txtEmail">Email Address</label>
+                                  <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email Address"></asp:TextBox>
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="txtPhoneNumber">Phone Number</label>
+                                  <asp:TextBox ID="txtPhoneNumber" runat="server" CssClass="form-control" placeholder="Phone Number"></asp:TextBox>
+                                </div>
+                           </div>
+                    
+                           
 
+                                                       
+                            <!----Fluff Info--->
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="txtEmail">Where did you go to school?</label>
+                                  <asp:TextBox ID="txtSchool" runat="server" CssClass="form-control" placeholder="School or University"></asp:TextBox>
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="txtKids">Plans for kids?</label>
+                                  <asp:TextBox ID="txtKids" runat="server" CssClass="form-control" placeholder="Plans for Kids"></asp:TextBox>
+                                </div>
+                              </div>
+
+                            
+                            <br />
+                                  
+                            <div class="row">
+                                <div class="col offset-4" >                            
+                                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" CssClass="btn btn-light btn-outline-dark"/>
+                                    <asp:Button ID="btnCancel" runat="server" Text="Cancel"  OnClick="btnCancel_Click" CssClass="btn btn-light btn-outline-dark"/>
+                                </div>
+                            </div>
+                    
+                    </div>
+                </div><!--/right-->
+            </div>            
+        </div>
+        </div>
         </div>
     </form>
      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

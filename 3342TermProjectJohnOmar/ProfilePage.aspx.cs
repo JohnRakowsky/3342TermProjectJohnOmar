@@ -13,5 +13,22 @@ namespace _3342TermProjectJohnOmar
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            editProfile.Visible = false;
+            viewProfile.Visible = true;
+        }
+
+        protected void btnEditProfile_Click(object sender, EventArgs e)
+        {
+            viewProfile.Visible = false;
+            editProfile.Visible = true;
+        }
     }
 }
