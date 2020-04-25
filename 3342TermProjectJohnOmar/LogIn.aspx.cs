@@ -62,6 +62,7 @@ namespace _3342TermProjectJohnOmar
 
 
                 // redirect to profile page. 
+                Session.Add("currentUser", txtUserEmail.Text);
                 Response.Redirect("ProfilePage.aspx");
             }
         }

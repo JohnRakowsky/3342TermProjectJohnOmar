@@ -27,10 +27,10 @@
                                 <a class="nav-link" href="Premium.aspx">Premium Membership</a>
                             </li>
                             <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" visible="true">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" visible="true">
                                 Account Management
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-menu" aria-labelledby="navbarAccount">
                                 <a class="dropdown-item" href="ProfilePage.aspx" runat="server" id="manageAccount">User Profile</a>
                                 <a class="dropdown-item" href="#">Manage Account</a>
                                 <a class="dropdown-item" href="#">Log Out</a>
@@ -43,10 +43,20 @@
                 </div>
             </nav>
         </div>
-
-
-
-        <div>
+        <div class="container">
+            <div class="row">
+                <h1 class="display-3">Welcome to Temple Singles</h1>
+            </div>
+            <div class="row">
+                <p>Temple Singles is meant to be a simple, user friendly dating website. Please feel free to browse our
+                    available users, but to access more advanced features such as messaging, liking other profiles, and to be
+                    found yourself, please <a href="LogIn.aspx">log in</a> to your account or 
+                    <a href="Registration.aspx">register</a> a new account.
+                </p>
+            </div>
+            <div class="row">
+                <u><strong>Thank you for using Temple Singles!</strong></u>
+            </div>
         </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
