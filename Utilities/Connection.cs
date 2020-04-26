@@ -225,6 +225,7 @@ namespace Utilities
 
             myConnectionSql.Open();
             return myConnectionSql;
+            
         }
 
     }   // end class

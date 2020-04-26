@@ -69,6 +69,50 @@ namespace Utilities
             return userVal;
 
         }
+
+        public string checkUser(string userEmail)
+        {
+            this.UserEmail = userEmail;
+
+            SqlCommand userNameCommand = new SqlCommand();
+            DBConnect dBConnect = new DBConnect();
+            // check if the user entered a valid user name and password 
+            // first we do sql proc. 
+
+            userNameCommand.CommandType = CommandType.StoredProcedure;
+
+            userNameCommand.CommandText = "checkUser";     // identify the name of the stored procedure to execute
+
+            // take the user input and add it to @userPassword
+            SqlParameter userParameter = new SqlParameter("@userEmail", UserEmail);
+            userParameter.Direction = ParameterDirection.Input;
+
+            userParameter.SqlDbType = SqlDbType.VarChar;
+
+            // addidn user input to the proc.
+
+            userNameCommand.Parameters.Add(userParameter);
+
+           
+            // closing connection before excuting (just to make sure the connection is closed 
+            dBConnect.CloseConnection();
+
+
+            //  open connection to DB
+            dBConnect.openConc();
+
+            // userVal holed the value coming from the proc. if the return value is 1 then there is a user with correct password, if the value is 0, then user is not in the database.
+            string userVal = dBConnect.ExecuteScalarFunction(userNameCommand).ToString();
+
+
+
+
+            // closing connection before excuting (just to make sure the connection is closed 
+            dBConnect.CloseConnection();
+
+            return userVal;
+
+        }
     }
 }
 
