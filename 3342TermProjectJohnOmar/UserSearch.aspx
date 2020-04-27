@@ -29,10 +29,10 @@
                                 <a class="nav-link" href="#">Premium Membership</a>
                             </li>
                             <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" visible="true">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" visible="true">
                                 Account Management
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-menu" aria-labelledby="navbarAccount">
                                 <a class="dropdown-item" href="ProfilePage.aspx" runat="server" id="manageAccount">User Profile</a>
                                 <a class="dropdown-item" href="#">Manage Account</a>
                                 <a class="dropdown-item" href="#">Log Out</a>
