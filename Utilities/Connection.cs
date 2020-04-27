@@ -228,5 +228,21 @@ namespace Utilities
             
         }
 
+        // added by omar 
+
+        public DataTable myDataTable()
+        {
+            DataTable dtbl = new DataTable();
+            SqlConnection sqlCon = new SqlConnection(SqlConnectString);
+            sqlCon.Open();
+            // don't forget to change the SQL statement !!
+            SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM TP_userLikedCollection", sqlCon);
+            sqlDa.Fill(dtbl);
+            sqlCon.Close();
+
+            return dtbl;
+        }
+
+
     }   // end class
 }   // end namespace

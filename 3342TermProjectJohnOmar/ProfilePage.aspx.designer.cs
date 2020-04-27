@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _3342TermProjectJohnOmar {
-    
-    
-    public partial class ProfilePage {
-        
+namespace _3342TermProjectJohnOmar
+{
+
+
+    public partial class ProfilePage
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// navbarDropdownMenuLink control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor navbarDropdownMenuLink;
-        
+
         /// <summary>
         /// navbarLogIn control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor navbarLogIn;
-        
+
         /// <summary>
         /// viewProfile control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl viewProfile;
-        
+
         /// <summary>
         /// ttlName control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ttlName;
-        
+
         /// <summary>
         /// btnLike control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLike;
-        
+
         /// <summary>
         /// btnPass control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPass;
-        
+
         /// <summary>
         /// btnEditProfile control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEditProfile;
-        
+
         /// <summary>
         /// imgOldProfilePic control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgOldProfilePic;
-        
+
         /// <summary>
         /// txtOldBio control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtOldBio;
-        
+
         /// <summary>
         /// lblPreference control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPreference;
-        
+
         /// <summary>
         /// lblAge control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAge;
-        
+
         /// <summary>
         /// lblEmail control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmail;
-        
+
         /// <summary>
         /// lblPhoneNumber control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPhoneNumber;
-        
+
         /// <summary>
         /// lblSchool control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSchool;
-        
+
         /// <summary>
         /// lblKids control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblKids;
-        
+
         /// <summary>
         /// editProfile control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl editProfile;
-        
+
         /// <summary>
         /// imgNewProfilePic control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgNewProfilePic;
-        
+
         /// <summary>
         /// btnUpload control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputFile btnUpload;
-        
+
         /// <summary>
         /// txtBio control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBio;
-        
+
         /// <summary>
         /// txtPreference control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPreference;
-        
+
         /// <summary>
         /// txtAge control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAge;
-        
+
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-        
+
         /// <summary>
         /// txtPhoneNumber control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhoneNumber;
-        
+
         /// <summary>
         /// txtSchool control.
         /// </summary>
@@ -236,7 +238,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSchool;
-        
+
         /// <summary>
         /// txtKids control.
         /// </summary>
@@ -245,7 +247,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtKids;
-        
+
         /// <summary>
         /// btnSubmit control.
         /// </summary>
@@ -254,7 +256,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>

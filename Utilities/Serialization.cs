@@ -117,5 +117,103 @@ namespace Utilities
 
         }
 
+
+        public Byte[] doSerializeStringV(Liked delete, string userEmail)
+        {
+
+            string rVal;
+            BinaryFormatter serializer = new BinaryFormatter();
+
+            MemoryStream memStream = new MemoryStream();
+
+            Byte[] byteArray;
+
+            serializer.Serialize(memStream, delete);
+
+            byteArray = memStream.ToArray();
+            objCommand.CommandType = CommandType.StoredProcedure;
+
+            objCommand.CommandText = "deletePass";
+
+
+
+            objCommand.Parameters.AddWithValue("@userEmail", userEmail);
+
+            objCommand.Parameters.AddWithValue("@userPass", byteArray);
+
+
+
+            int retVal = objDB.DoUpdateUsingCmdObj(objCommand);
+
+
+
+            //// Check to see whether the update was successful
+
+            if (retVal > 0)
+            {
+
+                rVal = " added to liked collection";
+            }
+            else
+            {
+
+                rVal = "A problem occured in storing the liked profile";
+
+            }
+
+
+            return byteArray;
+
+
+        }
+
+        public Byte[] doSerializeStringL(Liked delete, string userEmail)
+        {
+
+            string rVal;
+            BinaryFormatter serializer = new BinaryFormatter();
+
+            MemoryStream memStream = new MemoryStream();
+
+            Byte[] byteArray;
+
+            serializer.Serialize(memStream, delete);
+
+            byteArray = memStream.ToArray();
+            objCommand.CommandType = CommandType.StoredProcedure;
+
+            objCommand.CommandText = "deleteLiked";
+
+
+
+            objCommand.Parameters.AddWithValue("@userEmail", userEmail);
+
+            objCommand.Parameters.AddWithValue("@userLiked", byteArray);
+
+
+
+            int retVal = objDB.DoUpdateUsingCmdObj(objCommand);
+
+
+
+            //// Check to see whether the update was successful
+
+            if (retVal > 0)
+            {
+
+                rVal = " added to liked collection";
+            }
+            else
+            {
+
+                rVal = "A problem occured in storing the liked profile";
+
+            }
+
+
+            return byteArray;
+
+
+        }
     }
 }

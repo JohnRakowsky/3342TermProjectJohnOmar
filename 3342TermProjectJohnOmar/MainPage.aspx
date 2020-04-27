@@ -53,9 +53,64 @@
                     found yourself, please <a href="LogIn.aspx">log in</a> to your account or 
                     <a href="Registration.aspx">register</a> a new account.
                 </p>
+                      <u><strong>Thank you for using Temple Singles!</strong></u>
+                <asp:GridView ID="gvLiked" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None"
+                     OnRowDeleting="gvLiked_RowDeleting">
+
+                       <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+
+                       <Columns>
+                    <asp:BoundField DataField="LikedEmail" HeaderText="user Liked" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+
+                                    <asp:ImageButton ImageUrl="~/Images/delete.png" runat="server" CommandName="Delete" ToolTip="Delete" Width="20px" Height="20px"/>
+                                </ItemTemplate>
+
+                            </asp:TemplateField>
+                        </Columns>
+                       <EditRowStyle BackColor="#999999" />
+                       <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                       <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                       <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                       <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                       <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                       <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                       <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                       <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                       <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                </asp:GridView>
+
+                <asp:GridView ID="gvPass" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None"
+                    
+                     OnRowDeleting="gvPass_RowDeleting">
+                     <AlternatingRowStyle BackColor="White" ForeColor="#284775"   />
+
+                     <EditRowStyle BackColor="#999999" />
+                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                     <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                     <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                     <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                     <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                     <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                     <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                     <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+
+                        <Columns>
+                    <asp:BoundField DataField="LikedEmail" HeaderText="user Disliked" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+
+                                    <asp:ImageButton ImageUrl="~/Images/delete.png" runat="server" CommandName="Delete" ToolTip="Delete" Width="20px" Height="20px"/>
+                                </ItemTemplate>
+
+                            </asp:TemplateField>
+                        </Columns>
+                </asp:GridView>
             </div>
             <div class="row">
-                <u><strong>Thank you for using Temple Singles!</strong></u>
+          
             </div>
         </div>
     </form>

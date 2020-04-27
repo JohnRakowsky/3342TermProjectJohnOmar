@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _3342TermProjectJohnOmar {
-    
-    
-    public partial class MainPage {
-        
+namespace _3342TermProjectJohnOmar
+{
+
+
+    public partial class MainPage
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// navbarAccount control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor navbarAccount;
-        
+
         /// <summary>
         /// manageAccount control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor manageAccount;
-        
+
         /// <summary>
         /// navbarLogIn control.
         /// </summary>
@@ -47,5 +49,23 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor navbarLogIn;
+
+        /// <summary>
+        /// gvLiked control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvLiked;
+
+        /// <summary>
+        /// gvPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvPass;
     }
 }

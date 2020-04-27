@@ -34,7 +34,7 @@ namespace _3342TermProjectJohnOmar
             gvResults.DataSource = allusers;
             gvResults.DataBind();
             dBConnect.CloseConnection();
-            
+
 
         }
 
@@ -53,8 +53,8 @@ namespace _3342TermProjectJohnOmar
             query["userEmail"] = email;
             uriBuilder.Query = query.ToString();
             link = uriBuilder.ToString();
-            
-            Response.Redirect("ProfilePage.aspx?userEmail=" + email );
+
+            Response.Redirect("ProfilePage.aspx?userEmail=" + email);
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace _3342TermProjectJohnOmar
                 gvResults.DataBind();
                 dBConnect.CloseConnection();
             }
-            else if(ddlSearchOptions.SelectedValue == "Search By Preference")
+            else if (ddlSearchOptions.SelectedValue == "Search By Preference")
             {
                 string search = txtSearch.Text;
                 DBConnect dBConnect = new DBConnect();

@@ -120,12 +120,16 @@ namespace _3342TermProjectJohnOmar
 
         protected void btnLike_Click(object sender, EventArgs e)
         {
+            Liked liked = new Liked();
             if (Request.QueryString["userEmail"] != null)
             {
                 //  lblPhoneNumber.Text= Request.QueryString["userEmail"];
-                Liked liked = new Liked();
+
                 string userEmail = Session["userEmail"].ToString();
-                liked.LikedEmail = Request.QueryString["userEmail"];
+
+                string likedEmail = Request.QueryString["userEmail"];
+
+                liked.LikedEmail = likedEmail;
                 liked.UserEmail = userEmail;
 
                 Serialization serialize = new Serialization();
