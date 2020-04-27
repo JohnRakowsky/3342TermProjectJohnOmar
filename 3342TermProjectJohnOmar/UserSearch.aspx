@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserSearch.aspx.cs" Inherits="_3342TermProjectJohnOmar.UserSearch" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserSearch.aspx.cs" Inherits="_3342TermProjectJohnOmar.UserSearch" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -51,20 +51,28 @@
         <div class="container">
             <div class="row">
                 <div class="input-group   ">
-                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2"></asp:TextBox>
+                    <asp:DropDownList ID="ddlSearchOptions" runat="server">
+                        <asp:ListItem>Search By Name</asp:ListItem>
+                        <asp:ListItem>Search By Gender</asp:ListItem>
+                        <asp:ListItem>Search By State</asp:ListItem>
+                        <asp:ListItem>Search By Preference</asp:ListItem>
+                        <asp:ListItem>Search By City</asp:ListItem>
+                    </asp:DropDownList>
+                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control bg-light border-0 small border-dark" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2"></asp:TextBox>
                         <div class="input-group-append">
-                            <button class="btn btn-danger" type="button">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
+                            <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-danger" OnClick="btnSearch_Click" />
                         </div>
                     </div>
                 </div>
 
             <br />
             <br />
-        <div id ="searchResults" runat="server">
-            <asp:GridView ID="gvSearchResults" runat="server" ShowHeader="false" GridLines="None" AutoGenerateColumns="false" CssClass="table- AllowPaging="True" AllowCustomPaging="False" hover">
-            <Columns>
+        <div id ="searchResults" runat="server" class="container ">
+           <div class="row">
+               <div class="col-3"></div>
+               <div class="col-6">
+            <asp:GridView ID="gvResults" runat="server" ShowHeader="false" GridLines="None" AutoGenerateColumns="false" CssClass="table-hover">
+                <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
                     <table>
@@ -116,10 +124,13 @@
                                                
                                                 <tr>
                                                     <td>
-                                                       
+                                                       <asp:Label ID="lblEmail" 
+                                                        runat="server" Visible="false" 
+                                                        Text='<%#Eval("userEmail") %>'>
+                                                        </asp:Label>
                                                     </td>
                                                     <td>
-                                                        <asp:Button ID="btnViewProfile" runat="server" Text="Manage Class"  OnClick="btnViewProfile_Click" CssClass="btn btn-outline-dark  btn-light"/>
+                                                        <asp:Button ID="btnViewProfile" runat="server" Text="View Profile"   OnClick="btnViewProfile_Click" CssClass="btn btn-outline-dark  btn-light"/>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -129,10 +140,11 @@
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
-                </asp:GridView>
-
-
-
+            </asp:GridView>
+                   </div>
+               <div class="col-3"></div>
+               </div>
+               
         </div>
         </div>
      </form>

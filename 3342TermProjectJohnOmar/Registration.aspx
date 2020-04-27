@@ -46,13 +46,15 @@
             </nav>
         </div>
         <div>
+            <br />
+            <br />
                   <table style="margin:auto; border:5px solid white">
                 <tr>
                     <td>
             <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
                     </td>
                     <td>
-                           <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                           <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label  runat="server" ForeColor="Red" Text="*"></asp:Label>
             <br />
                     </td>
@@ -62,7 +64,7 @@
             <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
                     </td>
                     <td>
-            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
             <asp:Label  runat="server" ForeColor="Red" Text="*"></asp:Label>
             <br />
 
@@ -74,7 +76,7 @@
 
                     </td>
                     <td>
-            <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label  runat="server" ForeColor="Red" Text="*"></asp:Label>
             <br />
 
@@ -82,11 +84,33 @@
                 </tr>
      <tr>
                     <td>
-           <asp:Label ID="lblLname" runat="server" Text="Last Name"></asp:Label>
+           <asp:Label ID="lblLname" runat="server" Text="Last Name" ></asp:Label>
 
                     </td>
                     <td>
-            <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:Label  runat="server" ForeColor="Red" Text="*"></asp:Label>
+            <br />
+                    </td>
+                </tr>
+                      <tr>
+                    <td>
+           <asp:Label ID="lblGender" runat="server" Text="Gender" ></asp:Label>
+
+                    </td>
+                    <td>
+            <asp:TextBox ID="txtGender" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:Label  runat="server" ForeColor="Red" Text="*"></asp:Label>
+            <br />
+                    </td>
+                </tr>
+                      <tr>
+                    <td>
+           <asp:Label ID="lblPreference" runat="server" Text="Preference" ></asp:Label>
+
+                    </td>
+                    <td>
+            <asp:TextBox ID="txtPreference" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label  runat="server" ForeColor="Red" Text="*"></asp:Label>
             <br />
                     </td>
@@ -97,7 +121,7 @@
 
                     </td>
                     <td>
-            <asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtAge" runat="server" CssClass="form-control"></asp:TextBox>
             <br />
                     </td>
                 </tr>
@@ -107,7 +131,7 @@
 
                     </td>
                     <td>
-            <asp:TextBox ID="txtStreetAddress" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtStreetAddress" runat="server" CssClass="form-control"></asp:TextBox>
             <br />
                     </td>
                 </tr>
@@ -117,7 +141,7 @@
 
                     </td>
                     <td>
-            <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtCity" runat="server" CssClass="form-control"></asp:TextBox>
             <br />
                     </td>
                 </tr>
@@ -127,7 +151,7 @@
 
                     </td>
                     <td>
-            <asp:DropDownList ID="ddlStates" runat="server">
+            <asp:DropDownList ID="ddlStates" runat="server" CssClass="form-control">
             </asp:DropDownList>
             <br />
                     </td>
@@ -140,7 +164,7 @@
 
                     </td>
                     <td>
-            <asp:TextBox ID="txtZip" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtZip" runat="server" CssClass="form-control"></asp:TextBox>
             <br />
                     </td>
                 </tr>
@@ -167,7 +191,7 @@
                     </td>
                     <td>
 
-            <asp:TextBox ID="txtAnswer1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtAnswer1" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label  runat="server" ForeColor="Red" Text="*"></asp:Label>
             <br />
                     </td>
@@ -194,7 +218,7 @@
 
                     </td>
                     <td>
-            <asp:TextBox ID="txtAnswer2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtAnswer2" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label  runat="server" ForeColor="Red" Text="*"></asp:Label>
 
             <br />
@@ -216,13 +240,13 @@
 
                   <tr>
                     <td>
-                <asp:Label ID="lblAnswer3" runat="server" Text="Answer 3"></asp:Label>
+                <asp:Label ID="lblAnswer3" runat="server" Text="Answer 3" ></asp:Label>
             <br />
 
 
                     </td>
                     <td>
-            <asp:TextBox ID="txtAnswer3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtAnswer3" runat="server" CssClass="form-control"></asp:TextBox>
             <asp:Label  runat="server"  ForeColor="Red" Text="*"></asp:Label>
             <br />
                     </td>
@@ -231,13 +255,13 @@
 
 <tr>
     <td>
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" CssClass="form-control"/>
 
     </td>
       
            
                           <td>
-            <asp:Button ID="btnRegister" runat="server" Text="Register"  OnClientClick="return ValidateEmail();" OnClick="btnRegister_Click"  />
+            <asp:Button ID="btnRegister" runat="server" Text="Register"  OnClientClick="return ValidateEmail();" OnClick="btnRegister_Click"  CssClass="form-control"/>
             
                       
             <asp:Label ID="lblSuccessMessage" runat="server" ForeColor="#00CC00"></asp:Label>
