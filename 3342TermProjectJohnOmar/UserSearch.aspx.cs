@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Utilities;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace _3342TermProjectJohnOmar
 {
@@ -21,10 +24,14 @@ namespace _3342TermProjectJohnOmar
                 navbarAccount.Visible = false;
                 navbarLogIn.Visible = true;
             }
-
-
-
-
+            DBConnect dBConnect = new DBConnect();
+            SqlCommand getall = new SqlCommand("GetAllProfiles", dBConnect.openConc());
+            getall.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter dataadapter = new SqlDataAdapter();
+            dataadapter.SelectCommand = getall;
+            DataSet allusers = new DataSet();
+            dataadapter.Fill(allusers);
+            
 
 
         }

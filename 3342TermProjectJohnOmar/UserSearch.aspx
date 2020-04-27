@@ -63,7 +63,73 @@
             <br />
             <br />
         <div id ="searchResults" runat="server">
-
+            <asp:GridView ID="gvSearchResults" runat="server" ShowHeader="false" GridLines="None" AutoGenerateColumns="false" CssClass="table- AllowPaging="True" AllowCustomPaging="False" hover">
+            <Columns>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <table>
+                        <tr>
+                            <td style="width: 200px">
+                                <asp:Image ID="imgProfilePic" 
+                                    ImageUrl='<%# Eval("userProfilePic")%>' 
+                                    runat="server" />
+                                </td>
+                                    <td style="width: 200px">
+                                        <table>
+                                                <tr>
+                                                    <td>
+                                                    <b>Name:</b>
+                                                    </td>
+                                                    <td>
+                                                    <asp:Label ID="lblFirstName" 
+                                                    runat="server" 
+                                                    Text='<%#Eval("userFirstName") %>'>
+                                                    </asp:Label>
+                                                    <asp:Label ID="lblLastName" 
+                                                    runat="server" 
+                                                    Text='<%#Eval("userLastName") %>'>
+                                                    </asp:Label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    <b>Age: </b>
+                                                    </td>
+                                                    <td>
+                                                        <asp:Label ID="lblAge" 
+                                                        runat="server" 
+                                                        Text='<%#Eval("userAge") %>'>
+                                                        </asp:Label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>Preference:</b>
+                                                    </td>
+                                                    <td>
+                                                        <asp:Label ID="lblPreference" 
+                                                        runat="server" 
+                                                        Text='<%#Eval("userPreference") %>'>
+                                                        </asp:Label>
+                                                    </td>
+                                               </tr>
+                                               
+                                                <tr>
+                                                    <td>
+                                                       
+                                                    </td>
+                                                    <td>
+                                                        <asp:Button ID="btnViewProfile" runat="server" Text="Manage Class"  OnClick="btnViewProfile_Click" CssClass="btn btn-outline-dark  btn-light"/>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
 
 
 
