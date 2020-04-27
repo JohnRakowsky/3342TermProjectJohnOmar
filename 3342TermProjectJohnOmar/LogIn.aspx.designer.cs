@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _3342TermProjectJohnOmar {
-    
-    
-    public partial class LogIn {
-        
+namespace _3342TermProjectJohnOmar
+{
+
+
+    public partial class LogIn
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// navbarLogIn control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor navbarLogIn;
-        
+
         /// <summary>
         /// lblUserEmail control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUserEmail;
-        
+
         /// <summary>
         /// txtUserEmail control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUserEmail;
-        
+
         /// <summary>
         /// lblPass control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPass;
-        
+
         /// <summary>
         /// txtPass control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPass;
-        
+
         /// <summary>
         /// btnLogin control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
-        
+
         /// <summary>
         /// btnRegisterNew control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRegisterNew;
-        
+
         /// <summary>
         /// cbRemember control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace _3342TermProjectJohnOmar {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cbRemember;
-        
+
         /// <summary>
         /// lblError control.
         /// </summary>

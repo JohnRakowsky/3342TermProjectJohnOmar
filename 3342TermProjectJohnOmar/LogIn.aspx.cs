@@ -8,11 +8,19 @@ using System.Data;
 using Utilities;
 using System.Collections;
 using System.Data.SqlClient;
+using System.Text;
+using System.IO;                        // needed for the MemoryStream
+
+
 
 namespace _3342TermProjectJohnOmar
 {
     public partial class LogIn : System.Web.UI.Page
     {
+
+        RSA enc = new RSA();
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             lblError.Visible = false;
@@ -20,13 +28,32 @@ namespace _3342TermProjectJohnOmar
             SqlCommand objCommand = new SqlCommand();
 
             SqlCommand userNameCommand = new SqlCommand();
+
+
+
+
+
             // check if there is a cookie stored in the user browser 
-            if (Request.Cookies["authenticationCookie"] != null)
+            if (!IsPostBack && Request.Cookies["authenticationCookie"] != null)
             {
                 // set UserEmail to user email from the cookie 
                 txtUserEmail.Text = Request.Cookies["authenticationCookie"]["userEmail"];
-                // we have to use the attribute value because txtPass is used in password textmode. 
-                txtPass.Attributes["value"] = Request.Cookies["authenticationCookie"]["userPassword"];
+
+
+                HttpCookie useCookie = Request.Cookies["authenticationCookie"];
+                string encPassword = useCookie.Values["userPassword"];
+                // this should decrypt if you have the private key 
+                //
+                // var plainText = enc.Decrypt1(encPassword);
+
+                // should return the decrypted password
+                // txtPass.Text = plainText;
+
+                string passCookie = enc.PasswordDecryption(encPassword);
+
+                txtPass.Attributes["value"] = passCookie;
+
+
 
             }
 
@@ -56,13 +83,25 @@ namespace _3342TermProjectJohnOmar
                 // check if the user clicked remember me check box. if yes store useremail and password in a cookie
                 if (cbRemember.Checked)
                 {
+
+
+                    string password = txtPass.Text;
+
+                    // encrypting the password with RSA 
+                    // then saving it to the cookie 
+                    // string cypheredPass = enc.Encrypt1(password);
+                    //
+                    // enc.PasswordEncryption is using RijndaelManaged encryption 
+                    string pass = enc.PasswordEncryption(password);
                     Response.Cookies["authenticationCookie"]["userEmail"] = txtUserEmail.Text;
-                    Response.Cookies["authenticationCookie"]["userPassword"] = txtPass.Text;
+
+                    //CypherPass is used when you want to use RSA encryption
+                    Response.Cookies["authenticationCookie"]["userPassword"] = pass;//cypheredPass;
                 }
 
 
                 // redirect to profile page. 
-                Session.Add("currentUser", txtUserEmail.Text);
+
                 Response.Redirect("ProfilePage.aspx");
             }
         }
@@ -72,7 +111,7 @@ namespace _3342TermProjectJohnOmar
             Response.Redirect("Registration.aspx");
         }
     }
-        
+
 
 
 
