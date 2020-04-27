@@ -100,9 +100,14 @@ namespace _3342TermProjectJohnOmar
                 }
 
 
+
+                string email = txtUserEmail.Text;
                 // redirect to profile page. 
 
-                Response.Redirect("ProfilePage.aspx");
+                Session["userEmail"] = email;
+
+                Response.Redirect("ProfilePage.aspx?userEmail=" + email);
+
             }
         }
         protected void btnRegisterNew_Click(object sender, EventArgs e)

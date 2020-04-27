@@ -14,7 +14,7 @@ namespace _3342TermProjectJohnOmar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Request.QueryString["userEmail"] != null)
+            if (Request.QueryString["userEmail"] != null)
             {
                 string useremail = Request.QueryString["userEmail"];
                 btnEditProfile.Visible = false;
@@ -27,9 +27,9 @@ namespace _3342TermProjectJohnOmar
                 DataSet singleuser = new DataSet();
                 dataadapter.Fill(singleuser);
                 dBConnect.CloseConnection();
-                lblEmail.Text   = singleuser.Tables[0].Rows[0]["userEmail"].ToString();
+                lblEmail.Text = singleuser.Tables[0].Rows[0]["userEmail"].ToString();
                 lblAge.Text = singleuser.Tables[0].Rows[0]["userAge"].ToString();
-                lblKids.Text  = singleuser.Tables[0].Rows[0]["userKids"].ToString();
+                lblKids.Text = singleuser.Tables[0].Rows[0]["userKids"].ToString();
                 lblPhoneNumber.Text = singleuser.Tables[0].Rows[0]["userPhone"].ToString();
                 lblPreference.Text = singleuser.Tables[0].Rows[0]["userPreference"].ToString();
                 lblSchool.Text = singleuser.Tables[0].Rows[0]["userSchool"].ToString();
@@ -39,7 +39,7 @@ namespace _3342TermProjectJohnOmar
 
 
             }
-            else if(Session["userEmail"] != null)
+            else if (Session["userEmail"] != null)
             {
                 string useremail = Session["userEmail"].ToString();
                 btnLike.Visible = false;
@@ -99,12 +99,43 @@ namespace _3342TermProjectJohnOmar
 
         protected void btnPass_Click(object sender, EventArgs e)
         {
+            if (Request.QueryString["userEmail"] != null)
+            {
+                //  lblPhoneNumber.Text= Request.QueryString["userEmail"];
+                Liked pass = new Liked();
+                string userEmail = Session["userEmail"].ToString();
+                pass.LikedEmail = Request.QueryString["userEmail"];
+                pass.UserEmail = userEmail;
+
+                Serialization serialize = new Serialization();
+
+                string returnedValue = serialize.doSerializePass(pass, userEmail);
+
+                lblPhoneNumber.Text = returnedValue;
+
+
+            }
 
         }
 
         protected void btnLike_Click(object sender, EventArgs e)
         {
+            if (Request.QueryString["userEmail"] != null)
+            {
+                //  lblPhoneNumber.Text= Request.QueryString["userEmail"];
+                Liked liked = new Liked();
+                string userEmail = Session["userEmail"].ToString();
+                liked.LikedEmail = Request.QueryString["userEmail"];
+                liked.UserEmail = userEmail;
 
+                Serialization serialize = new Serialization();
+
+                string returnedValue = serialize.doSerialize(liked, userEmail);
+
+                lblPhoneNumber.Text = returnedValue;
+
+
+            }
         }
     }
 }
