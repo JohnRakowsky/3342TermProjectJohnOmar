@@ -51,6 +51,8 @@
                     <h3 runat="server" id="ttlName">User Name</h3>
                 </div>
                 <div class="col-2">
+                    <asp:Button ID="btnLike" runat="server" Text="Like Profile" CssClass="form-control" OnClick="btnLike_Click"/>
+                    <asp:Button ID="btnPass" runat="server" Text="Pass Profile" CssClass="form-control" OnClick="btnPass_Click" />
                     <asp:Button ID="btnEditProfile" runat="server" Text="Edit Profile" CssClass="form-control" OnClick="btnEditProfile_Click" />
                 </div>
             </div>

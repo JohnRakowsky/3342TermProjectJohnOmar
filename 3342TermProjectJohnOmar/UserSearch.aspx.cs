@@ -59,16 +59,25 @@ namespace _3342TermProjectJohnOmar
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            if(ddlSearchOptions.SelectedValue == "Search By Name")
+            if (ddlSearchOptions.SelectedValue == "Search By Name")
             {
                 string search = txtSearch.Text;
                 string[] array = search.Split(null);
                 string firstname = array[0];
-                string lastname = array[1];
+                string lastname;
+                if (array.Length > 1)
+                {
+                    lastname = array[1];
+                }
+                else
+                {
+                    lastname = "";
+                }
                 DBConnect dBConnect = new DBConnect();
                 SqlCommand getall = new SqlCommand("SearchByName", dBConnect.openConc());
                 getall.CommandType = CommandType.StoredProcedure;
-                getall.Parameters.AddWithValue("@userFirstName", firstname);
+                getall.Parameters.AddWithValue("@FirstName", firstname);
+                getall.Parameters.AddWithValue("@LastName", lastname);
                 SqlDataAdapter dataadapter = new SqlDataAdapter();
                 dataadapter.SelectCommand = getall;
                 DataSet allusers = new DataSet();
@@ -83,7 +92,7 @@ namespace _3342TermProjectJohnOmar
                 DBConnect dBConnect = new DBConnect();
                 SqlCommand getall = new SqlCommand("SearchByPreference", dBConnect.openConc());
                 getall.CommandType = CommandType.StoredProcedure;
-                getall.Parameters.AddWithValue("@userPreference", search);
+                getall.Parameters.AddWithValue("@Search", search);
                 SqlDataAdapter dataadapter = new SqlDataAdapter();
                 dataadapter.SelectCommand = getall;
                 DataSet allusers = new DataSet();
@@ -96,9 +105,9 @@ namespace _3342TermProjectJohnOmar
             {
                 string search = txtSearch.Text;
                 DBConnect dBConnect = new DBConnect();
-                SqlCommand getall = new SqlCommand("SearchState", dBConnect.openConc());
+                SqlCommand getall = new SqlCommand("SearchByState", dBConnect.openConc());
                 getall.CommandType = CommandType.StoredProcedure;
-                getall.Parameters.AddWithValue("@userState", search);
+                getall.Parameters.AddWithValue("@Search", search);
                 SqlDataAdapter dataadapter = new SqlDataAdapter();
                 dataadapter.SelectCommand = getall;
                 DataSet allusers = new DataSet();
@@ -113,7 +122,7 @@ namespace _3342TermProjectJohnOmar
                 DBConnect dBConnect = new DBConnect();
                 SqlCommand getall = new SqlCommand("SearchByCity", dBConnect.openConc());
                 getall.CommandType = CommandType.StoredProcedure;
-                getall.Parameters.AddWithValue("@userCity", search);
+                getall.Parameters.AddWithValue("@Search", search);
                 SqlDataAdapter dataadapter = new SqlDataAdapter();
                 dataadapter.SelectCommand = getall;
                 DataSet allusers = new DataSet();
@@ -128,7 +137,7 @@ namespace _3342TermProjectJohnOmar
                 DBConnect dBConnect = new DBConnect();
                 SqlCommand getall = new SqlCommand("SearchByGender", dBConnect.openConc());
                 getall.CommandType = CommandType.StoredProcedure;
-                getall.Parameters.AddWithValue("@userGender", search);
+                getall.Parameters.AddWithValue("@Search", search);
                 SqlDataAdapter dataadapter = new SqlDataAdapter();
                 dataadapter.SelectCommand = getall;
                 DataSet allusers = new DataSet();
