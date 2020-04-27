@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserSearch.aspx.cs" Inherits="_3342TermProjectJohnOmar.UserSearch" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserSearch.aspx.cs" Inherits="_3342TermProjectJohnOmar.UserSearch" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -51,22 +51,100 @@
         <div class="container">
             <div class="row">
                 <div class="input-group   ">
-                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2"></asp:TextBox>
+                    <asp:DropDownList ID="ddlSearchOptions" runat="server">
+                        <asp:ListItem>Search By Name</asp:ListItem>
+                        <asp:ListItem>Search By Gender</asp:ListItem>
+                        <asp:ListItem>Search By State</asp:ListItem>
+                        <asp:ListItem>Search By Preference</asp:ListItem>
+                        <asp:ListItem>Search By City</asp:ListItem>
+                    </asp:DropDownList>
+                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control bg-light border-0 small border-dark" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2"></asp:TextBox>
                         <div class="input-group-append">
-                            <button class="btn btn-danger" type="button">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
+                            <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-danger" OnClick="btnSearch_Click" />
                         </div>
                     </div>
                 </div>
 
             <br />
             <br />
-        <div id ="searchResults" runat="server">
-
-
-
-
+        <div id ="searchResults" runat="server" class="container ">
+           <div class="row">
+               <div class="col-3"></div>
+               <div class="col-6">
+            <asp:GridView ID="gvResults" runat="server" ShowHeader="false" GridLines="None" AutoGenerateColumns="false" CssClass="table-hover">
+                <Columns>
+            <asp:TemplateField>
+                <ItemTemplate>
+                    <table>
+                        <tr>
+                            <td style="width: 200px">
+                                <asp:Image ID="imgProfilePic" 
+                                    ImageUrl='<%# Eval("userProfilePic")%>' 
+                                    runat="server" />
+                                </td>
+                                    <td style="width: 200px">
+                                        <table>
+                                                <tr>
+                                                    <td>
+                                                    <b>Name:</b>
+                                                    </td>
+                                                    <td>
+                                                    <asp:Label ID="lblFirstName" 
+                                                    runat="server" 
+                                                    Text='<%#Eval("userFirstName") %>'>
+                                                    </asp:Label>
+                                                    <asp:Label ID="lblLastName" 
+                                                    runat="server" 
+                                                    Text='<%#Eval("userLastName") %>'>
+                                                    </asp:Label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                    <b>Age: </b>
+                                                    </td>
+                                                    <td>
+                                                        <asp:Label ID="lblAge" 
+                                                        runat="server" 
+                                                        Text='<%#Eval("userAge") %>'>
+                                                        </asp:Label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b>Preference:</b>
+                                                    </td>
+                                                    <td>
+                                                        <asp:Label ID="lblPreference" 
+                                                        runat="server" 
+                                                        Text='<%#Eval("userPreference") %>'>
+                                                        </asp:Label>
+                                                    </td>
+                                               </tr>
+                                               
+                                                <tr>
+                                                    <td>
+                                                       <asp:Label ID="lblEmail" 
+                                                        runat="server" Visible="false" 
+                                                        Text='<%#Eval("userEmail") %>'>
+                                                        </asp:Label>
+                                                    </td>
+                                                    <td>
+                                                        <asp:Button ID="btnViewProfile" runat="server" Text="View Profile"   OnClick="btnViewProfile_Click" CssClass="btn btn-outline-dark  btn-light"/>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+            </asp:GridView>
+                   </div>
+               <div class="col-3"></div>
+               </div>
+               
         </div>
         </div>
      </form>

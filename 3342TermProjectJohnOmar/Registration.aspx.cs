@@ -106,14 +106,23 @@ namespace _3342TermProjectJohnOmar
                     sqlCmd.Parameters.AddWithValue("@userZipCode", txtZip.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@userCity", txtCity.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@userState", ddlStates.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@userGender", txtGender.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@userPreference", txtGender.Text.Trim());
                     // Executing the command
                     sqlCmd.ExecuteNonQuery();
                     // closing connection
                     con.CloseConnection();
+                    //Add new row to profile table
+                    SqlCommand newprofile = new SqlCommand("AddProfile", con.openConc());
+                    newprofile.CommandType = CommandType.StoredProcedure;
+                    newprofile.Parameters.AddWithValue("@userEmail", txtEmail.Text);
+                    newprofile.ExecuteNonQuery();
+
+                    con.CloseConnection();
 
 
                     // label to inform user is added to DB
-                    lblSuccessMessage.Text = "user created ";
+                    lblSuccessMessage.Text = "Profile Created!";
                     Response.Redirect("LogIn.aspx");
 
 

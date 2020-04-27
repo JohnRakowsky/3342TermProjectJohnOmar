@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _3342TermProjectJohnOmar
-{
-
-
-    public partial class Registration
-    {
-
+namespace _3342TermProjectJohnOmar {
+    
+    
+    public partial class Registration {
+        
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// lblEmail control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmail;
-
+        
         /// <summary>
         /// txtEmail control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
-
+        
         /// <summary>
         /// lblPassword control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPassword;
-
+        
         /// <summary>
         /// txtPassword control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
-
+        
         /// <summary>
         /// lblFName control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFName;
-
+        
         /// <summary>
         /// txtFirstName control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
-
+        
         /// <summary>
         /// lblLname control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLname;
-
+        
         /// <summary>
         /// txtLastName control.
         /// </summary>
@@ -94,7 +92,43 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
-
+        
+        /// <summary>
+        /// lblGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblGender;
+        
+        /// <summary>
+        /// txtGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGender;
+        
+        /// <summary>
+        /// lblPreference control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPreference;
+        
+        /// <summary>
+        /// txtPreference control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPreference;
+        
         /// <summary>
         /// lblAge control.
         /// </summary>
@@ -103,7 +137,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAge;
-
+        
         /// <summary>
         /// txtAge control.
         /// </summary>
@@ -112,7 +146,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAge;
-
+        
         /// <summary>
         /// lblStreetAddress control.
         /// </summary>
@@ -121,7 +155,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblStreetAddress;
-
+        
         /// <summary>
         /// txtStreetAddress control.
         /// </summary>
@@ -130,7 +164,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtStreetAddress;
-
+        
         /// <summary>
         /// lblCity control.
         /// </summary>
@@ -139,7 +173,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCity;
-
+        
         /// <summary>
         /// txtCity control.
         /// </summary>
@@ -148,7 +182,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCity;
-
+        
         /// <summary>
         /// lblState control.
         /// </summary>
@@ -157,7 +191,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblState;
-
+        
         /// <summary>
         /// ddlStates control.
         /// </summary>
@@ -166,7 +200,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlStates;
-
+        
         /// <summary>
         /// lblZip control.
         /// </summary>
@@ -175,7 +209,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblZip;
-
+        
         /// <summary>
         /// txtZip control.
         /// </summary>
@@ -184,7 +218,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtZip;
-
+        
         /// <summary>
         /// lblQ1 control.
         /// </summary>
@@ -193,7 +227,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblQ1;
-
+        
         /// <summary>
         /// ddlQuestion1 control.
         /// </summary>
@@ -202,7 +236,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlQuestion1;
-
+        
         /// <summary>
         /// lblAnswer1 control.
         /// </summary>
@@ -211,7 +245,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAnswer1;
-
+        
         /// <summary>
         /// txtAnswer1 control.
         /// </summary>
@@ -220,7 +254,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAnswer1;
-
+        
         /// <summary>
         /// lblQ2 control.
         /// </summary>
@@ -229,7 +263,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblQ2;
-
+        
         /// <summary>
         /// ddlQuestion2 control.
         /// </summary>
@@ -238,7 +272,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlQuestion2;
-
+        
         /// <summary>
         /// lblAsnwer2 control.
         /// </summary>
@@ -247,7 +281,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAsnwer2;
-
+        
         /// <summary>
         /// txtAnswer2 control.
         /// </summary>
@@ -256,7 +290,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAnswer2;
-
+        
         /// <summary>
         /// lblQ3 control.
         /// </summary>
@@ -265,7 +299,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblQ3;
-
+        
         /// <summary>
         /// ddlQuestion3 control.
         /// </summary>
@@ -274,7 +308,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlQuestion3;
-
+        
         /// <summary>
         /// lblAnswer3 control.
         /// </summary>
@@ -283,7 +317,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAnswer3;
-
+        
         /// <summary>
         /// txtAnswer3 control.
         /// </summary>
@@ -292,7 +326,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAnswer3;
-
+        
         /// <summary>
         /// btnCancel control.
         /// </summary>
@@ -301,7 +335,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
-
+        
         /// <summary>
         /// btnRegister control.
         /// </summary>
@@ -310,7 +344,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRegister;
-
+        
         /// <summary>
         /// lblSuccessMessage control.
         /// </summary>
@@ -319,7 +353,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSuccessMessage;
-
+        
         /// <summary>
         /// lblErrorMessage control.
         /// </summary>
