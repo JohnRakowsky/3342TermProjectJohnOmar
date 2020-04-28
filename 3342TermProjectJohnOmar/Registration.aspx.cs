@@ -106,8 +106,8 @@ namespace _3342TermProjectJohnOmar
                     sqlCmd.Parameters.AddWithValue("@userZipCode", txtZip.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@userCity", txtCity.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@userState", ddlStates.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@userGender", txtGender.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@userPreference", txtGender.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@userGender", ddlGender.SelectedValue);
+                    sqlCmd.Parameters.AddWithValue("@userPreference", txtPreference.Text.Trim());
                     // Executing the command
                     sqlCmd.ExecuteNonQuery();
                     // closing connection

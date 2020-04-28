@@ -51,12 +51,17 @@
         <div class="container">
             <div class="row">
                 <div class="input-group   ">
-                    <asp:DropDownList ID="ddlSearchOptions" runat="server">
+                    <asp:DropDownList ID="ddlSearchOptions" runat="server" OnSelectedIndexChanged="ddlSearchOptions_SelectedIndexChanged" onchange="ChangeIndex(this)">
                         <asp:ListItem>Search By Name</asp:ListItem>
                         <asp:ListItem>Search By Gender</asp:ListItem>
                         <asp:ListItem>Search By State</asp:ListItem>
                         <asp:ListItem>Search By Preference</asp:ListItem>
                         <asp:ListItem>Search By City</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:DropDownList ID="ddlGender" runat="server" CssClass="form-control" Visible="false">
+                        <asp:ListItem>Male</asp:ListItem>
+                        <asp:ListItem>Female</asp:ListItem>
+                        <asp:ListItem>Other</asp:ListItem>
                     </asp:DropDownList>
                         <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control bg-light border-0 small border-dark" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2"></asp:TextBox>
                         <div class="input-group-append">
@@ -148,6 +153,23 @@
         </div>
         </div>
      </form>
+    <script type="text/javascript">
+      function ChangeIndex(ddl)
+      {
+         if(ddl.SelectedValue == "Search By Gender")
+            {
+                txtSearch.Visible = false;
+                ddlGender.Visible = true;
+            
+            }
+            else
+            {
+                txtSearch.Visible = true;
+                ddlGender.Visible = false;
+
+            }
+      }
+</script>
      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
