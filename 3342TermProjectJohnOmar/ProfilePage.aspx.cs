@@ -35,6 +35,7 @@ namespace _3342TermProjectJohnOmar
                 lblSchool.Text = singleuser.Tables[0].Rows[0]["userSchool"].ToString();
                 txtOldBio.Text = singleuser.Tables[0].Rows[0]["userBio"].ToString();
                 ttlName.InnerText = singleuser.Tables[0].Rows[0]["userFirstName"].ToString() + " " + singleuser.Tables[0].Rows[0]["userLastName"].ToString();
+                imgOldProfilePic.ImageUrl = singleuser.Tables[0].Rows[0]["userProfilePic"].ToString();
 
 
 
@@ -74,6 +75,20 @@ namespace _3342TermProjectJohnOmar
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            DBConnect dBConnect = new DBConnect();
+            SqlCommand update = new SqlCommand("UpdateProfile", dBConnect.openConc());
+            update.CommandType = CommandType.StoredProcedure;
+            update.Parameters.AddWithValue("@userEmail", txtEmail.Text);
+            update.Parameters.AddWithValue("@userAge", txtAge.Text);
+            update.Parameters.AddWithValue("@userPhoneNumber", txtPhoneNumber.Text);
+            update.Parameters.AddWithValue("@userPreference", txtPreference.Text);
+            update.Parameters.AddWithValue("@userSchool", txtSchool.Text);
+            update.Parameters.AddWithValue("@userBio", txtBio.Text);
+            update.Parameters.AddWithValue("@userProfilePic", txtProfilePic.Text);
+            update.ExecuteNonQuery();
+            dBConnect.CloseConnection();
+
+
 
         }
 
@@ -89,12 +104,13 @@ namespace _3342TermProjectJohnOmar
             editProfile.Visible = true;
 
             txtEmail.Text = lblEmail.Text;
-            txtAge.Text = lblEmail.Text;
-            txtKids.Text = lblEmail.Text;
-            txtPhoneNumber.Text = lblEmail.Text;
-            txtPreference.Text = lblEmail.Text;
-            txtSchool.Text = lblEmail.Text;
+            txtAge.Text = lblAge.Text;
+            txtKids.Text = lblKids.Text;
+            txtPhoneNumber.Text = lblPhoneNumber.Text;
+            txtPreference.Text = lblPreference.Text;
+            txtSchool.Text = lblSchool.Text;
             txtBio.Text = txtOldBio.Text;
+            imgNewProfilePic.ImageUrl = imgOldProfilePic.ImageUrl.ToString();
         }
 
         protected void btnPass_Click(object sender, EventArgs e)

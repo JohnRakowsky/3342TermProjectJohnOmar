@@ -133,7 +133,7 @@ namespace _3342TermProjectJohnOmar
             }
             else
             {
-                string search = txtSearch.Text;
+                string search = ddlGender.SelectedValue;
                 DBConnect dBConnect = new DBConnect();
                 SqlCommand getall = new SqlCommand("SearchByGender", dBConnect.openConc());
                 getall.CommandType = CommandType.StoredProcedure;
@@ -145,6 +145,22 @@ namespace _3342TermProjectJohnOmar
                 gvResults.DataSource = allusers;
                 gvResults.DataBind();
                 dBConnect.CloseConnection();
+            }
+        }
+
+        protected void ddlSearchOptions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ddlSearchOptions.SelectedValue == "Search By Gender")
+            {
+                txtSearch.Visible = false;
+                ddlGender.Visible = true;
+            
+            }
+            else
+            {
+                txtSearch.Visible = true;
+                ddlGender.Visible = false;
+
             }
         }
     }

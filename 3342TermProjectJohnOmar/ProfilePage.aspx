@@ -138,8 +138,8 @@
                                <div class="col-12">
                                     <asp:Image ID="imgNewProfilePic" runat="server" />             
                                     <div class="form-group">
-                                    <label for="btnUpload">Upload Photo</label>
-                                    <input type="file" class="form-control-file" id="btnUpload" runat="server"/>
+                                    <label for="txtProfilePic">Upload Photo</label>
+                                        <asp:TextBox ID="txtProfilePic" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                             </div><!--/top--->

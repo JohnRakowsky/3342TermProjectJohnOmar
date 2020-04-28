@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _3342TermProjectJohnOmar
-{
-
-
-    public partial class UserSearch
-    {
-
+namespace _3342TermProjectJohnOmar {
+    
+    
+    public partial class UserSearch {
+        
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// navbarAccount control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor navbarAccount;
-
+        
         /// <summary>
         /// manageAccount control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor manageAccount;
-
+        
         /// <summary>
         /// navbarLogIn control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor navbarLogIn;
-
+        
         /// <summary>
         /// ddlSearchOptions control.
         /// </summary>
@@ -58,7 +56,16 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSearchOptions;
-
+        
+        /// <summary>
+        /// ddlGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlGender;
+        
         /// <summary>
         /// txtSearch control.
         /// </summary>
@@ -67,7 +74,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSearch;
-
+        
         /// <summary>
         /// btnSearch control.
         /// </summary>
@@ -76,7 +83,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearch;
-
+        
         /// <summary>
         /// searchResults control.
         /// </summary>
@@ -85,7 +92,7 @@ namespace _3342TermProjectJohnOmar
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl searchResults;
-
+        
         /// <summary>
         /// gvResults control.
         /// </summary>

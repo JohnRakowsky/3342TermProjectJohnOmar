@@ -51,12 +51,17 @@
         <div class="container">
             <div class="row">
                 <div class="input-group   ">
-                    <asp:DropDownList ID="ddlSearchOptions" runat="server">
+                    <asp:DropDownList ID="ddlSearchOptions" runat="server" OnSelectedIndexChanged="ddlSearchOptions_SelectedIndexChanged">
                         <asp:ListItem>Search By Name</asp:ListItem>
                         <asp:ListItem>Search By Gender</asp:ListItem>
                         <asp:ListItem>Search By State</asp:ListItem>
                         <asp:ListItem>Search By Preference</asp:ListItem>
                         <asp:ListItem>Search By City</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:DropDownList ID="ddlGender" runat="server" CssClass="form-control" Visible="false">
+                        <asp:ListItem>Male</asp:ListItem>
+                        <asp:ListItem>Female</asp:ListItem>
+                        <asp:ListItem>Other</asp:ListItem>
                     </asp:DropDownList>
                         <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control bg-light border-0 small border-dark" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2"></asp:TextBox>
                         <div class="input-group-append">
