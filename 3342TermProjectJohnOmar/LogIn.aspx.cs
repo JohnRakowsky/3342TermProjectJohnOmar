@@ -104,7 +104,8 @@ namespace _3342TermProjectJohnOmar
                 string email = txtUserEmail.Text;
                 // redirect to profile page. 
 
-                Session["userEmail"] = email;
+                Session.Add("userEmail", email);
+
 
                 Response.Redirect("ProfilePage.aspx?userEmail=" + email);
 

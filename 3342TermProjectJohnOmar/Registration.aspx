@@ -99,7 +99,7 @@
 
                     </td>
                     <td>
-            <asp:DropDownList ID="ddlGender" runat="server" CssClass="form-control" Visible="false">
+            <asp:DropDownList ID="ddlGender" runat="server" CssClass="form-control">
                         <asp:ListItem>Male</asp:ListItem>
                         <asp:ListItem>Female</asp:ListItem>
                         <asp:ListItem>Other</asp:ListItem>

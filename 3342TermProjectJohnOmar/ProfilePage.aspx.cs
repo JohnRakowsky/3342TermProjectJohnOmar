@@ -16,78 +16,92 @@ namespace _3342TermProjectJohnOmar
         {
             if (Request.QueryString["userEmail"] != null)
             {
-                string useremail = Request.QueryString["userEmail"];
-                btnEditProfile.Visible = false;
-                DBConnect dBConnect = new DBConnect();
-                SqlCommand getall = new SqlCommand("GetSingleProfile", dBConnect.openConc());
-                getall.CommandType = CommandType.StoredProcedure;
-                getall.Parameters.AddWithValue("@userEmail", useremail);
-                SqlDataAdapter dataadapter = new SqlDataAdapter();
-                dataadapter.SelectCommand = getall;
-                DataSet singleuser = new DataSet();
-                dataadapter.Fill(singleuser);
-                dBConnect.CloseConnection();
-                lblEmail.Text = singleuser.Tables[0].Rows[0]["userEmail"].ToString();
-                lblAge.Text = singleuser.Tables[0].Rows[0]["userAge"].ToString();
-                lblKids.Text = singleuser.Tables[0].Rows[0]["userKids"].ToString();
-                lblPhoneNumber.Text = singleuser.Tables[0].Rows[0]["userPhone"].ToString();
-                lblPreference.Text = singleuser.Tables[0].Rows[0]["userPreference"].ToString();
-                lblSchool.Text = singleuser.Tables[0].Rows[0]["userSchool"].ToString();
-                txtOldBio.Text = singleuser.Tables[0].Rows[0]["userBio"].ToString();
-                ttlName.InnerText = singleuser.Tables[0].Rows[0]["userFirstName"].ToString() + " " + singleuser.Tables[0].Rows[0]["userLastName"].ToString();
-                imgOldProfilePic.ImageUrl = singleuser.Tables[0].Rows[0]["userProfilePic"].ToString();
+                if(Request.QueryString["userEmail"].ToString() == Session["userEmail"].ToString())
+                {
+                    navbarLogIn.Visible = false;
+                    string useremail = Session["userEmail"].ToString();
+                    btnLike.Visible = false;
+                    btnPass.Visible = false;
+                    btnEditProfile.Visible = true;
+                    DBConnect dBConnect = new DBConnect();
+                    SqlCommand getall = new SqlCommand("GetSingleProfile", dBConnect.openConc());
+                    getall.CommandType = CommandType.StoredProcedure;
+                    getall.Parameters.AddWithValue("@userEmail", useremail);
+                    SqlDataAdapter dataadapter = new SqlDataAdapter();
+                    dataadapter.SelectCommand = getall;
+                    DataSet singleuser = new DataSet();
+                    dataadapter.Fill(singleuser);
+                    dBConnect.CloseConnection();
+                    lblEmail.Text = singleuser.Tables[0].Rows[0]["userEmail"].ToString();
+                    lblAge.Text = singleuser.Tables[0].Rows[0]["userAge"].ToString();
+                    lblKids.Text = singleuser.Tables[0].Rows[0]["userKids"].ToString();
+                    lblPhoneNumber.Text = singleuser.Tables[0].Rows[0]["userPhone"].ToString();
+                    lblPreference.Text = singleuser.Tables[0].Rows[0]["userPreference"].ToString();
+                    lblSchool.Text = singleuser.Tables[0].Rows[0]["userSchool"].ToString();
+                    txtOldBio.Text = singleuser.Tables[0].Rows[0]["userBio"].ToString();
+                    ttlName.InnerText = singleuser.Tables[0].Rows[0]["userFirstName"].ToString() + " " + singleuser.Tables[0].Rows[0]["userLastName"].ToString();
+                }
+                else
+                {
+                    
+                    string useremail = Request.QueryString["userEmail"];
+                    btnEditProfile.Visible = false;
+                    DBConnect dBConnect = new DBConnect();
+                    SqlCommand getall = new SqlCommand("GetSingleProfile", dBConnect.openConc());
+                    getall.CommandType = CommandType.StoredProcedure;
+                    getall.Parameters.AddWithValue("@userEmail", useremail);
+                    SqlDataAdapter dataadapter = new SqlDataAdapter();
+                    dataadapter.SelectCommand = getall;
+                    DataSet singleuser = new DataSet();
+                    dataadapter.Fill(singleuser);
+                    dBConnect.CloseConnection();
+                    lblEmail.Text = singleuser.Tables[0].Rows[0]["userEmail"].ToString();
+                    lblAge.Text = singleuser.Tables[0].Rows[0]["userAge"].ToString();
+                    lblKids.Text = singleuser.Tables[0].Rows[0]["userKids"].ToString();
+                    lblPhoneNumber.Text = singleuser.Tables[0].Rows[0]["userPhone"].ToString();
+                    lblPreference.Text = singleuser.Tables[0].Rows[0]["userPreference"].ToString();
+                    lblSchool.Text = singleuser.Tables[0].Rows[0]["userSchool"].ToString();
+                    txtOldBio.Text = singleuser.Tables[0].Rows[0]["userBio"].ToString();
+                    ttlName.InnerText = singleuser.Tables[0].Rows[0]["userFirstName"].ToString() + " " + singleuser.Tables[0].Rows[0]["userLastName"].ToString();
+                    imgOldProfilePic.ImageUrl = singleuser.Tables[0].Rows[0]["userProfilePic"].ToString();
+                }
+                
 
 
 
             }
             else if (Session["userEmail"] != null)
             {
-                string useremail = Session["userEmail"].ToString();
-                btnLike.Visible = false;
-                btnPass.Visible = false;
-                DBConnect dBConnect = new DBConnect();
-                SqlCommand getall = new SqlCommand("GetSingleProfile", dBConnect.openConc());
-                getall.CommandType = CommandType.StoredProcedure;
-                getall.Parameters.AddWithValue("@userEmail", useremail);
-                SqlDataAdapter dataadapter = new SqlDataAdapter();
-                dataadapter.SelectCommand = getall;
-                DataSet singleuser = new DataSet();
-                dataadapter.Fill(singleuser);
-                dBConnect.CloseConnection();
-                lblEmail.Text = singleuser.Tables[0].Rows[0]["userEmail"].ToString();
-                lblAge.Text = singleuser.Tables[0].Rows[0]["userAge"].ToString();
-                lblKids.Text = singleuser.Tables[0].Rows[0]["userKids"].ToString();
-                lblPhoneNumber.Text = singleuser.Tables[0].Rows[0]["userPhone"].ToString();
-                lblPreference.Text = singleuser.Tables[0].Rows[0]["userPreference"].ToString();
-                lblSchool.Text = singleuser.Tables[0].Rows[0]["userSchool"].ToString();
-                txtOldBio.Text = singleuser.Tables[0].Rows[0]["userBio"].ToString();
-                ttlName.InnerText = singleuser.Tables[0].Rows[0]["userFirstName"].ToString() + " " + singleuser.Tables[0].Rows[0]["userLastName"].ToString();
 
 
+                navbarLogIn.Visible = false;
 
 
             }
             else
             {
-
+                navbarLogIn.Visible = true;
+                navbarDropdownMenuLink.Visible = false;
             }
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             DBConnect dBConnect = new DBConnect();
-            SqlCommand update = new SqlCommand("UpdateProfile", dBConnect.openConc());
+            SqlCommand update = new SqlCommand("UpdateUserProfile", dBConnect.openConc());
             update.CommandType = CommandType.StoredProcedure;
             update.Parameters.AddWithValue("@userEmail", txtEmail.Text);
-            update.Parameters.AddWithValue("@userAge", txtAge.Text);
-            update.Parameters.AddWithValue("@userPhoneNumber", txtPhoneNumber.Text);
+            update.Parameters.AddWithValue("@userPhone", txtPhoneNumber.Text);
             update.Parameters.AddWithValue("@userPreference", txtPreference.Text);
             update.Parameters.AddWithValue("@userSchool", txtSchool.Text);
             update.Parameters.AddWithValue("@userBio", txtBio.Text);
+            update.Parameters.AddWithValue("@userKids", txtKids.Text);
+
             update.Parameters.AddWithValue("@userProfilePic", txtProfilePic.Text);
             update.ExecuteNonQuery();
             dBConnect.CloseConnection();
-
+            editProfile.Visible = false;
+            viewProfile.Visible = true;
 
 
         }
