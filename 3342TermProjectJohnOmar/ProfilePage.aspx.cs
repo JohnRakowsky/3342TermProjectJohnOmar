@@ -56,7 +56,7 @@ namespace _3342TermProjectJohnOmar
                 lblEmail.Text = singleuser.Tables[0].Rows[0]["userEmail"].ToString();
                 lblAge.Text = singleuser.Tables[0].Rows[0]["userAge"].ToString();
                 lblKids.Text = singleuser.Tables[0].Rows[0]["userKids"].ToString();
-                lblPhoneNumber.Text = singleuser.Tables[0].Rows[0]["userPhoneNumber"].ToString();
+                lblPhoneNumber.Text = singleuser.Tables[0].Rows[0]["userPhone"].ToString();
                 lblPreference.Text = singleuser.Tables[0].Rows[0]["userPreference"].ToString();
                 lblSchool.Text = singleuser.Tables[0].Rows[0]["userSchool"].ToString();
                 txtOldBio.Text = singleuser.Tables[0].Rows[0]["userBio"].ToString();
