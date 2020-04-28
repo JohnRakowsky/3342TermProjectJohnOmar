@@ -53,6 +53,7 @@
                       </td>
                     <td>
                         <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                        <asp:Button ID="btnResetPassword" runat="server" Text="ResetPassword" OnClick="btnResetPassword_Click" />
 <%--                       <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click"/>--%>
                 <asp:Button ID="btnRegisterNew" runat="server" Text="Register" OnClick="btnRegisterNew_Click"/>
                         </td>

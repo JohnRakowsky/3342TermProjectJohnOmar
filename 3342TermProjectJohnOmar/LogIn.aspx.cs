@@ -115,6 +115,12 @@ namespace _3342TermProjectJohnOmar
 
             Response.Redirect("Registration.aspx");
         }
+
+        protected void btnResetPassword_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("ResetPassword.aspx");
+        }
     }
 
 
